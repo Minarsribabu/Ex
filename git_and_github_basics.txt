@@ -1,0 +1,69 @@
+git init
+	--to create a  new repo
+(touch -- used to create a new text file using CLI)
+touch x.txt
+	-- to create a new text file
+git add x.txt (git add . [for adding all the file to the repo])
+	-- to add files into the repo
+git status
+	--to check for the changes made to the repo (eg: adding or deleting the file the repo)
+
+git commit -m "Responce msg"
+	--used to commit the changes which are made to repo
+	--m for displaying message for successful commit
+	eg: git commit -m "names.txt added"
+
+git log 
+	--used to check or trace the history of commits 
+git reset commit-id
+	--when we require previous commit code then we use git reset
+	eg: git reset 88f8142a99e5e2f464cb76dd1d9b7d5dde7faa79
+	NOTE: after reseting the commit the changes made to after that commit will be unchanged state
+git stash
+	--used to store the changes at somewhere like back but not in the repo we are changing
+git stash pop
+	--used to get the changes which are stored back
+git stash clear
+	--for clear the stored changes
+git remote add origin github-repo_link
+	--used to connect to the github_repo remotely using github_repo_link naming it as origin
+git remote -v
+	--used to know how many remote users in the repo
+git push origin master
+	--to push the code into GitHub using CLI or git
+Branch:- A pointer to a specific version(commit) in our project history
+
+git branch branchName:- used r create a branch
+	--commiting the code/files in brance will not effect in main branch
+	 this is the main advantage when we are contributing to Open source
+git checkout newBranchName
+	--to use newBrance
+
+git merge BranchName
+	--merging the branch to the main project after finalizing the branch
+
+one branch will have only have the one PR(Pull Request), so its better to use branching when we are creating/developing any new things, because its not commit until the upstream accepts the changes
+
+git push origin BranchName -f 
+	-- forcefully pushing the code/ after the unusual commit to the brance
+
+fork:- used to create our own copy of existing repo.
+eg: directly we can't modify the code of any repo, so we make a copy of the repo into our repo by using fork.so that, if we can easily modify/update the code easily.
+-the URL from where we fork the repo is called upstream
+
+git remote add upstream githubrepoURL_of upstream
+	--
+
+git clone repoURL
+	--used to clone the existing repo
+
+git fetch --all --prune
+	--used to fetch all the pull requests from different branchs even they are deleted(because we are using prune) 
+
+git rebase -i commitID
+	--i=>interactive environment
+	pick and s; s takes the previous pick to commit the changes rather than indiviual commits for each
+
+git push -u origin BranceName
+	-- push the code into the repository
+
